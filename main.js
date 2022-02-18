@@ -1,5 +1,5 @@
 /*
-    Variables declaretion
+    Variables declaretion 
 */
 let index = 0; //slide's index
 

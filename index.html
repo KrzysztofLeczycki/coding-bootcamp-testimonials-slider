@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="main.js" async></script>
+  
+</head>
+<body>
+  <main>
+    <section id="testimonials"><!--The container with curve as the background-->
+      <!--The container with images and buttons-->
+      <div class="image-box"><!--The container with the background-->
+        <div class="image-wrapper"><!--The container supporting images and buttons positioning-->
+          <img class="slide-img" src="./images/image-tanya.jpg" alt="Tanya ux designer">
+          <img class="slide-img" src="./images/image-john.jpg" alt="John front-end developer">
+          <div class="btn-set"><!--Buttons' container-->
+            <button id="prev" name="previous slide"><img src="./images/icon-prev.svg" alt="previous button"></button>
+            <button id="next" name="next slide"><img src="./images/icon-next.svg" alt="next button"></button>
+          </div>
+        </div> 
+      </div>
+      <!--The container with texts-->
+      <div class="text-box"><!--The container with quotes sign as the background-->
+        <figure class="slide-text">
+          <blockquote>
+            <p class="quote">
+              “ I’ve been interested in coding for a while but never taken the jump, until now. 
+              I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+              excited about the future. ”
+            </p>
+          </blockquote>
+          <figcaption>
+            <span class="name">Tanya Sinclair</span>
+            <span class="job">UX Engineer</span>
+          </figcaption>
+        </figure>
+        <figure class="slide-text">
+          <blockquote>
+            <p class="quote">
+              “ If you want to lay the best foundation possible I’d recommend taking this course. 
+              The depth the instructors go into is incredible. I now feel so confident about 
+              starting up as a professional developer. ”
+            </p>
+          </blockquote>
+          <figcaption>
+            <span class="name">John Tarkpor</span>
+            <span class="job">Junior Front-end Developer</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://krzysztofleczycki.github.io/portfolio/">Krzysztof Łęczycki</a>.
+  </footer>
+</body>
+</html>

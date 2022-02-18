@@ -1,0 +1,251 @@
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+/*Reset styles*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+basic settings of the page
+*/
+:root{
+    font-size: 17px;
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+    font-family: 'Inter', sans-serif;
+}
+
+/*
+section basic settings
+*/
+#testimonials{
+    width: 100vw;
+    background-image: url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: bottom left;
+}
+
+
+/*
+Image settings
+*/
+
+/*Main container for images and buttons*/
+.image-box{
+    text-align: center;
+    margin: 25px auto;
+    width: calc(325/375*100%);
+    max-width: 550px;
+    aspect-ratio: 1;
+    background-image: url(./images/pattern-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper{
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box img{
+    width: calc(255/325*100%);
+    border-radius: 5px;
+    box-shadow: 0 45px 40px -25px var(--grayish-blue);
+}
+
+/*
+Buttons styles
+*/
+/*Buttons positioning*/
+.btn-set{
+    position: absolute;
+    bottom: -21px;
+    border-radius: 27px;
+    background-color: white;
+}
+
+.btn-set button{
+    border: none;
+    background-color: transparent;
+    padding: 13px;
+    line-height: 0;
+}
+
+#next{
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+}
+
+#prev{
+    border-top-left-radius: 27px;
+    border-bottom-left-radius: 27px;
+}
+
+.btn-set button:hover{
+    background-color: var(--grayish-blue);
+    transition: background-color 0.6s;
+    cursor: pointer;
+}
+
+.btn-set button:active{
+    background-color: var(--dark-blue);
+    transition: background-color 0.6s;
+}
+
+
+/*
+Quotes settings
+*/
+.text-box{
+    min-height: 280px;
+    padding: 30px;
+    text-align: center;
+    background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 18%;
+    background-position: top center;
+    line-height: 1.3em;
+    
+}
+
+.quote{
+    font-weight: 300;
+    color: var(--dark-blue);
+}
+
+figcaption{
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+}
+
+figcaption .name{
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+figcaption .job{
+    font-weight: 300;
+    color: var(--grayish-blue);
+}
+
+/*
+slider's supporting styles
+*/
+/*Each slide's element is initialy hidden*/
+.slide-img, .slide-text{
+    display: none;
+}
+/*Animation settings*/
+.from-right{
+    animation-name: from-right;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+@keyframes from-right {
+    0%{
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.from-left{
+    animation-name: from-left;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+@keyframes from-left {
+    0%{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100%{
+        opacity: 0.9;
+        transform: translateX(0);
+    }
+}
+
+/*
+Footer styles
+*/
+footer{
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 300;
+    background-color: #f4f4fc;
+    font-size: 0.85rem;
+    color: var(--dark-blue);
+}
+
+/*Desktop version*/
+@media(min-width: 600px){
+    #testimonials{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        max-width: 1440px;
+        background-size: 30%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .image-box{
+        flex-basis: 700px;
+        
+    }
+
+    .btn-set{
+        left: 20%;
+    }
+  
+    .text-box{
+        flex-basis: 700px;
+        text-align: left;
+        position: relative;
+        left: 15%;
+        padding-top: 5vw;
+        padding-bottom: 0;
+        background-position: top left 25%;
+    }
+
+    .quote{
+        font-size: 32px;
+        line-height: 1.3em;
+    }
+
+    figcaption{
+        display: block;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1090px){
+    .text-box{
+        min-height: auto;
+    }
+    
+    .quote{
+        font-size: 1rem;
+        line-height: 1.3em;
+    }
+}

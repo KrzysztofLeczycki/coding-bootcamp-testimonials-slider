@@ -1,7 +1,7 @@
 /*
     Variables declaretion 
 */
-let index = 0; //slide's index
+let index = 0; //slide's index 
 
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
